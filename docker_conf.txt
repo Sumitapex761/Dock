@@ -1,0 +1,12 @@
+sudo apt install docker.io -y
+sudo usermod admin
+sudo docker login
+
+
+nano Dockerfile
+FROM nginx  
+COPY  *  /usr/share/nginx/html/
+
+
+docker build  -t  username/imagename .
+docker push username/imagename
